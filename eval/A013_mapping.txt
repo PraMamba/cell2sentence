@@ -1,0 +1,62 @@
+Cell Type Mapping Analysis - A013
+================================================================================
+
+Predicted → Normalized:
+--------------------------------------------------------------------------------
+effector memory CD8-positive, alpha-beta T cell              → Alpha-beta T cell
+effector CD8-positive, alpha-beta T cell                     → Alpha-beta T cell
+naive thymus-derived CD4-positive, alpha-beta T cell         → Alpha-beta T cell
+CD4-positive, alpha-beta T cell                              → Alpha-beta T cell
+central memory CD4-positive, alpha-beta T cell               → Alpha-beta T cell
+naive thymus-derived CD8-positive, alpha-beta T cell         → Alpha-beta T cell
+CD8-positive, alpha-beta T cell                              → Alpha-beta T cell
+effector memory CD4-positive, alpha-beta T cell              → Alpha-beta T cell
+CD8-positive, alpha-beta memory T cell                       → Alpha-beta memory T cell
+CD4-positive, alpha-beta memory T cell                       → Alpha-beta memory T cell
+B cell                                                       → B cell
+CD14-positive monocyte                                       → CD14+ monocyte
+CD14-positive, CD16-negative classical monocyte              → CD16-negative monocyte
+CD4-positive helper T cell                                   → CD4-positive helper T cell
+CD16-positive, CD56-dim natural killer cell, human           → CD56^dim NK cell
+conventional dendritic cell                                  → Conventional dendritic cell
+gamma-delta T cell                                           → Gamma-delta T cell
+natural killer cell                                          → NK cell
+naive B cell                                                 → Naive B cell
+plasmacytoid dendritic cell                                  → Plasmacytoid dendritic cell
+classical monocyte                                           → classical monocyte
+malignant cell                                               → malignant cell
+non-classical monocyte                                       → non-classical monocyte
+plasma cell                                                  → plasma cell
+
+
+GroundTruth → Normalized:
+--------------------------------------------------------------------------------
+central memory CD4-positive, alpha-beta T cell               → Alpha-beta T cell
+naive thymus-derived CD4-positive, alpha-beta T cell         → Alpha-beta T cell
+effector memory CD4-positive, alpha-beta T cell              → Alpha-beta T cell
+effector memory CD8-positive, alpha-beta T cell              → Alpha-beta T cell
+naive thymus-derived CD8-positive, alpha-beta T cell         → Alpha-beta T cell
+central memory CD8-positive, alpha-beta T cell               → Alpha-beta T cell
+CD14-positive monocyte                                       → CD14+ monocyte
+CD14-low, CD16-positive monocyte                             → CD14-low monocyte
+CD16-negative, CD56-bright natural killer cell, human        → CD16-negative monocyte
+CD4-positive, alpha-beta cytotoxic T cell                    → CD4-positive, alpha-beta cytotoxic T cell
+conventional dendritic cell                                  → Conventional dendritic cell
+gamma-delta T cell                                           → Gamma-delta T cell
+mucosal invariant T cell                                     → MAIT cell
+memory B cell                                                → Memory B cell
+natural killer cell                                          → NK cell
+naive B cell                                                 → Naive B cell
+plasmablast                                                  → Plasmablast
+plasmacytoid dendritic cell                                  → Plasmacytoid dendritic cell
+transitional stage B cell                                    → Transitional B cell
+double negative thymocyte                                    → double negative thymocyte
+hematopoietic precursor cell                                 → hematopoietic precursor cell
+regulatory T cell                                            → regulatory T cell
+
+
+Statistics:
+--------------------------------------------------------------------------------
+Total samples: 1000
+Unique predicted types (normalized): 16
+Unique ground truth types (normalized): 17

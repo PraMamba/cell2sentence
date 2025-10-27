@@ -1,0 +1,10 @@
+Metrics - D099
+================================================================================
+
+accuracy: 0.0000
+macro_precision: 0.0000
+macro_recall: 0.0000
+macro_f1: 0.0000
+weighted_precision: 0.0000
+weighted_recall: 0.0000
+weighted_f1: 0.0000

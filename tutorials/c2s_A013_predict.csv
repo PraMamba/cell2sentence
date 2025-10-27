@@ -1,0 +1,1001 @@
+﻿Predicted,GroundTruth
+naive B cell,naive B cell
+B cell,memory B cell
+naive B cell,naive B cell
+malignant cell,naive B cell
+naive B cell,naive B cell
+naive B cell,transitional stage B cell
+naive B cell,naive B cell
+naive B cell,naive B cell
+naive B cell,transitional stage B cell
+naive B cell,naive B cell
+naive B cell,naive B cell
+naive B cell,transitional stage B cell
+B cell,naive B cell
+B cell,naive B cell
+naive B cell,memory B cell
+naive B cell,naive B cell
+naive B cell,transitional stage B cell
+naive B cell,naive B cell
+plasma cell,plasmablast
+naive B cell,transitional stage B cell
+naive B cell,naive B cell
+B cell,naive B cell
+B cell,naive B cell
+naive B cell,naive B cell
+naive B cell,transitional stage B cell
+naive B cell,transitional stage B cell
+naive B cell,memory B cell
+naive B cell,naive B cell
+naive B cell,naive B cell
+naive B cell,transitional stage B cell
+naive B cell,naive B cell
+naive B cell,transitional stage B cell
+naive B cell,naive B cell
+naive B cell,naive B cell
+B cell,naive B cell
+B cell,transitional stage B cell
+naive B cell,naive B cell
+B cell,naive B cell
+naive B cell,transitional stage B cell
+naive B cell,transitional stage B cell
+malignant cell,transitional stage B cell
+B cell,transitional stage B cell
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta memory T cell",regulatory T cell
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+CD4-positive helper T cell,"central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta memory T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell",gamma-delta T cell
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+CD4-positive helper T cell,"effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta memory T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta memory T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell",regulatory T cell
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+CD4-positive helper T cell,"central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"effector memory CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta memory T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell",regulatory T cell
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+CD4-positive helper T cell,"central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+CD4-positive helper T cell,"central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell",regulatory T cell
+"naive thymus-derived CD4-positive, alpha-beta T cell",gamma-delta T cell
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+CD4-positive helper T cell,"central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell",gamma-delta T cell
+"CD4-positive, alpha-beta memory T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta memory T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta memory T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta memory T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"naive thymus-derived CD4-positive, alpha-beta T cell",regulatory T cell
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta memory T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"effector memory CD4-positive, alpha-beta T cell","CD4-positive, alpha-beta cytotoxic T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell",regulatory T cell
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+CD4-positive helper T cell,"central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+CD4-positive helper T cell,"central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta memory T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell",regulatory T cell
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell",regulatory T cell
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta memory T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",regulatory T cell
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell",natural killer cell
+"CD4-positive, alpha-beta T cell",gamma-delta T cell
+"CD8-positive, alpha-beta T cell","central memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",gamma-delta T cell
+"CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell",gamma-delta T cell
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","central memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell",double negative thymocyte
+"CD8-positive, alpha-beta T cell",natural killer cell
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta memory T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell",natural killer cell
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell",natural killer cell
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell",natural killer cell
+"CD8-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell",natural killer cell
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","central memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+gamma-delta T cell,"effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell",natural killer cell
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell",gamma-delta T cell
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","CD4-positive, alpha-beta cytotoxic T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+natural killer cell,"effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell",gamma-delta T cell
+gamma-delta T cell,"effector memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD8-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","central memory CD8-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","naive thymus-derived CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD8-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","central memory CD8-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"naive thymus-derived CD4-positive, alpha-beta T cell","central memory CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD8-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD8-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"central memory CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","central memory CD4-positive, alpha-beta T cell"
+"CD4-positive, alpha-beta T cell","effector memory CD4-positive, alpha-beta T cell"
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell",mucosal invariant T cell
+"effector memory CD8-positive, alpha-beta T cell",mucosal invariant T cell
+"effector memory CD8-positive, alpha-beta T cell",mucosal invariant T cell
+"effector memory CD8-positive, alpha-beta T cell",mucosal invariant T cell
+"effector memory CD8-positive, alpha-beta T cell",mucosal invariant T cell
+gamma-delta T cell,mucosal invariant T cell
+"effector memory CD8-positive, alpha-beta T cell",mucosal invariant T cell
+"effector memory CD8-positive, alpha-beta T cell",mucosal invariant T cell
+"effector memory CD8-positive, alpha-beta T cell",mucosal invariant T cell
+"CD4-positive, alpha-beta memory T cell",mucosal invariant T cell
+"effector memory CD8-positive, alpha-beta T cell",mucosal invariant T cell
+gamma-delta T cell,"effector memory CD8-positive, alpha-beta T cell"
+gamma-delta T cell,natural killer cell
+"effector memory CD8-positive, alpha-beta T cell",gamma-delta T cell
+"CD8-positive, alpha-beta T cell",natural killer cell
+"effector memory CD8-positive, alpha-beta T cell",natural killer cell
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell",natural killer cell
+gamma-delta T cell,mucosal invariant T cell
+"CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+gamma-delta T cell,natural killer cell
+"effector memory CD8-positive, alpha-beta T cell",gamma-delta T cell
+gamma-delta T cell,gamma-delta T cell
+gamma-delta T cell,gamma-delta T cell
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell",gamma-delta T cell
+gamma-delta T cell,"effector memory CD8-positive, alpha-beta T cell"
+gamma-delta T cell,"effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell",gamma-delta T cell
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+gamma-delta T cell,natural killer cell
+natural killer cell,natural killer cell
+"effector memory CD8-positive, alpha-beta T cell",gamma-delta T cell
+"CD8-positive, alpha-beta memory T cell",gamma-delta T cell
+natural killer cell,natural killer cell
+"effector memory CD8-positive, alpha-beta T cell",natural killer cell
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+natural killer cell,natural killer cell
+"effector memory CD8-positive, alpha-beta T cell",natural killer cell
+"effector memory CD8-positive, alpha-beta T cell","effector memory CD8-positive, alpha-beta T cell"
+gamma-delta T cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+gamma-delta T cell,natural killer cell
+"effector memory CD8-positive, alpha-beta T cell","CD16-negative, CD56-bright natural killer cell, human"
+natural killer cell,"CD16-negative, CD56-bright natural killer cell, human"
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,"CD16-negative, CD56-bright natural killer cell, human"
+natural killer cell,natural killer cell
+"CD8-positive, alpha-beta T cell",natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+"effector memory CD8-positive, alpha-beta T cell","CD16-negative, CD56-bright natural killer cell, human"
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+"CD16-positive, CD56-dim natural killer cell, human",natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+gamma-delta T cell,"CD16-negative, CD56-bright natural killer cell, human"
+natural killer cell,natural killer cell
+"CD16-positive, CD56-dim natural killer cell, human",natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+"CD8-positive, alpha-beta memory T cell","CD16-negative, CD56-bright natural killer cell, human"
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,"CD16-negative, CD56-bright natural killer cell, human"
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,"CD16-negative, CD56-bright natural killer cell, human"
+natural killer cell,natural killer cell
+"CD16-positive, CD56-dim natural killer cell, human",natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+natural killer cell,natural killer cell
+plasmacytoid dendritic cell,plasmacytoid dendritic cell
+plasmacytoid dendritic cell,plasmacytoid dendritic cell
+plasmacytoid dendritic cell,plasmacytoid dendritic cell
+plasmacytoid dendritic cell,plasmacytoid dendritic cell
+plasmacytoid dendritic cell,plasmacytoid dendritic cell
+plasmacytoid dendritic cell,plasmacytoid dendritic cell
+plasmacytoid dendritic cell,plasmacytoid dendritic cell
+plasmacytoid dendritic cell,plasmacytoid dendritic cell
+plasmacytoid dendritic cell,plasmacytoid dendritic cell
+classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+conventional dendritic cell,conventional dendritic cell
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,"CD14-low, CD16-positive monocyte"
+conventional dendritic cell,conventional dendritic cell
+classical monocyte,CD14-positive monocyte
+conventional dendritic cell,conventional dendritic cell
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+CD14-positive monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,conventional dendritic cell
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+"CD14-positive, CD16-negative classical monocyte",CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,"CD14-low, CD16-positive monocyte"
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,"CD14-low, CD16-positive monocyte"
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,"CD14-low, CD16-positive monocyte"
+CD14-positive monocyte,CD14-positive monocyte
+classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,"CD14-low, CD16-positive monocyte"
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+classical monocyte,"CD14-low, CD16-positive monocyte"
+classical monocyte,CD14-positive monocyte
+classical monocyte,CD14-positive monocyte
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+non-classical monocyte,"CD14-low, CD16-positive monocyte"
+"CD4-positive, alpha-beta memory T cell",hematopoietic precursor cell

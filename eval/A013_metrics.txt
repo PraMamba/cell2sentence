@@ -1,0 +1,10 @@
+Metrics - A013
+================================================================================
+
+accuracy: 0.7170
+macro_precision: 0.2221
+macro_recall: 0.1744
+macro_f1: 0.1780
+weighted_precision: 0.8129
+weighted_recall: 0.7170
+weighted_f1: 0.7086

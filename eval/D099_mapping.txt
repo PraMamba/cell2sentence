@@ -1,0 +1,67 @@
+Cell Type Mapping Analysis - D099
+================================================================================
+
+Predicted → Normalized:
+--------------------------------------------------------------------------------
+basal cell                                                   → Basal cell
+basal cell of epithelium of bronchus                         → Bronchial basal cell
+ciliated cell of the bronchus                                → Bronchial ciliated cell
+epithelial cell of the bronchus                              → Bronchial epithelial cell
+brush cell                                                   → Brush cell
+ciliated cell                                                → Ciliated epithelial cell
+club cell                                                    → Club cell
+kidney collecting duct principal cell                        → Collecting duct principal cell
+corneal epithelial cell                                      → Corneal epithelial cell
+cell in vitro                                                → Cultured cell
+cultured cell                                                → Cultured cell
+duct epithelial cell                                         → Ductal epithelial cell
+basal cell of epidermis                                      → Epidermal basal cell
+epithelial cell                                              → Epithelial cell
+epithelial cell of esophagus                                 → Esophageal epithelial cell
+foveolar cell of stomach                                     → Gastric foveolar cell
+goblet cell                                                  → Goblet cell
+granulocyte                                                  → Granulocyte
+kidney loop of Henle thin ascending limb epithelial cell     → Loop of Henle thin ascending limb cell
+kidney loop of Henle thin descending limb epithelial cell    → Loop of Henle thin descending limb cell
+epithelial cell of lower respiratory tract                   → Lower respiratory epithelial cell
+endothelial cell of lymphatic vessel                         → Lymphatic endothelial cell
+malignant cell                                               → Malignant cell
+melanocyte                                                   → Melanocyte
+nasal mucosa goblet cell                                     → Nasal goblet cell
+native cell                                                  → Native cell
+epithelial cell of nephron                                   → Nephron epithelial cell
+neutrophil                                                   → Neutrophil
+basal cell of prostate epithelium                            → Prostate basal cell
+epithelial cell of proximal tubule                           → Proximal tubule epithelial cell
+lung ciliated cell                                           → Pulmonary ciliated cell
+epithelial cell of lung                                      → Pulmonary epithelial cell
+lung goblet cell                                             → Pulmonary goblet cell
+lung secretory cell                                          → Pulmonary secretory cell
+respiratory basal cell                                       → Respiratory basal cell
+secretory cell                                               → Secretory epithelial cell
+squamous epithelial cell                                     → Squamous epithelial cell
+stratified epithelial cell                                   → Stratified epithelial cell
+basal cell of epithelium of trachea                          → Tracheal basal cell
+tracheal goblet cell                                         → Tracheal goblet cell
+type II pneumocyte                                           → Type II pneumocyte (AT2 cell)
+endothelial cell of umbilical vein                           → Umbilical vein endothelial cell (HUVEC)
+epithelial cell of urethra                                   → Urethral epithelial cell
+blood vessel endothelial cell                                → Vascular endothelial cell
+
+
+GroundTruth → Normalized:
+--------------------------------------------------------------------------------
+Basal                                                        → Basal
+Ciliated                                                     → Ciliated
+Differentiating.Basal                                        → Differentiating basal
+Proliferating.Basal                                          → Proliferating basal
+Secretory                                                    → Secretory
+Suprabasal                                                   → Suprabasal
+Transitioning.Basal                                          → Transitioning basal
+
+
+Statistics:
+--------------------------------------------------------------------------------
+Total samples: 15806
+Unique predicted types (normalized): 43
+Unique ground truth types (normalized): 7
