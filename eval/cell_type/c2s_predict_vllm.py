@@ -14,7 +14,11 @@ Usage:
         --tensor_parallel_size 2
 """
 
+# CRITICAL: Set environment variable BEFORE importing vllm
+# This must be done before any vllm imports to take effect
 import os
+os.environ['VLLM_USE_V1'] = '0'
+
 import json
 import argparse
 import re
@@ -155,10 +159,8 @@ def run_vllm_inference(
         top_p: Top-p sampling
         top_k: Top-k sampling
     """
-    # Disable V1 engine to avoid Gemma2 compatibility issues
-    # V1 engine has known issues with some Gemma2 model configs
-    import os
-    os.environ['VLLM_USE_V1'] = '0'
+    # Note: VLLM_USE_V1 environment variable should be set before importing vllm
+    # This is already handled at the top of the script
     
     os.makedirs(output_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
