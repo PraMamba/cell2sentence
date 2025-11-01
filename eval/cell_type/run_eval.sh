@@ -8,16 +8,24 @@ conda activate Axolotl
 cd ~/cell2sentence/eval/cell_type
 
 # Configuration
-BASE_DIR="/data/Mamba/Project/Single_Cell/Benchmark/Cell_Type"
+BASE_DIR="/gpfs/Mamba/Project/Single_Cell/Benchmark/Cell_Type"
 DATA_DIR="${BASE_DIR}/Cell2Sentence/Processed_Data"
 OUTPUT_DIR="${BASE_DIR}/Cell2Sentence"
-MODEL_PATH="/data/Mamba/Data/hf_cache/hub/models--vandijklab--C2S-Pythia-410m-cell-type-prediction/snapshots/5a4dc3b949b5868ca63752b37bc22e3b0216e435"
+
+# Model configuration
+# MODEL_PATH="/data/Mamba/Data/hf_cache/hub/models--vandijklab--C2S-Pythia-410m-cell-type-prediction/snapshots/5a4dc3b949b5868ca63752b37bc22e3b0216e435"
+# MODEL_TYPE="pythia"
+
 MODEL_PATH="/data/Mamba/Data/hf_cache/hub/models--vandijklab--C2S-Scale-Gemma-2-2B/snapshots/7fc451a816ba12d47c85c5c5ad0036c994705d1f"
-MODEL_PATH="vandijklab/C2S-Scale-Gemma-2-2B"
+MODEL_TYPE="gemma"
+
+# MODEL_PATH="vandijklab/C2S-Scale-Gemma-2-2B"
+# MODEL_TYPE="gemma"
 
 # Prediction parameters
 N_GENES=200
 SEED=1234
+ORGANISM="Homo sapiens"
 
 # Datasets to evaluate
 DATASETS=(
@@ -31,8 +39,10 @@ echo "=========================================="
 echo "Data Directory: ${DATA_DIR}"
 echo "Output Directory: ${OUTPUT_DIR}"
 echo "Model Path: ${MODEL_PATH}"
+echo "Model Type: ${MODEL_TYPE}"
 echo "N Genes: ${N_GENES}"
 echo "Seed: ${SEED}"
+echo "Organism: ${ORGANISM}"
 echo "=========================================="
 
 # Run pipeline for each dataset
@@ -65,7 +75,9 @@ for dataset_info in "${DATASETS[@]}"; do
         --output_dir "${eval_results_dir}" \
         --dataset_id "${dataset_id}" \
         --n_genes ${N_GENES} \
-        --seed ${SEED}
+        --seed ${SEED} \
+        --model_type "${MODEL_TYPE}" \
+        --organism "${ORGANISM}"
     
     if [ $? -ne 0 ]; then
         echo "[ERROR] Prediction failed for ${dataset_id}"
