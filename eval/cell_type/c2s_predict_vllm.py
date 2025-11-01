@@ -167,8 +167,13 @@ def run_vllm_inference(
     print(f"[INFO] GPU memory utilization: {gpu_memory_utilization}")
     print(f"[INFO] Batch size: {batch_size}")
     
+    # Disable V1 engine to avoid Gemma2 compatibility issues
+    # V1 engine has known issues with some Gemma2 model configs
+    import os
+    os.environ['VLLM_USE_V1'] = '0'
+    
     # Initialize vLLM engine
-    logging.info("Initializing vLLM engine...")
+    logging.info("Initializing vLLM engine (V0)...")
     llm = LLM(
         model=model_path,
         tensor_parallel_size=tensor_parallel_size,

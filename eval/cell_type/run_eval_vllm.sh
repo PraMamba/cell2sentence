@@ -4,6 +4,9 @@ set -eu
 # === Environment Setup ===
 export CUDA_VISIBLE_DEVICES=0,1
 
+# Disable vLLM V1 engine to avoid Gemma2 compatibility issues
+export VLLM_USE_V1=0
+
 source ~/.bashrc
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate vLLM
