@@ -155,6 +155,11 @@ def run_vllm_inference(
         top_p: Top-p sampling
         top_k: Top-k sampling
     """
+    # Disable V1 engine to avoid Gemma2 compatibility issues
+    # V1 engine has known issues with some Gemma2 model configs
+    import os
+    os.environ['VLLM_USE_V1'] = '0'
+    
     os.makedirs(output_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
@@ -166,11 +171,6 @@ def run_vllm_inference(
     print(f"[INFO] Tensor parallel size: {tensor_parallel_size}")
     print(f"[INFO] GPU memory utilization: {gpu_memory_utilization}")
     print(f"[INFO] Batch size: {batch_size}")
-    
-    # Disable V1 engine to avoid Gemma2 compatibility issues
-    # V1 engine has known issues with some Gemma2 model configs
-    import os
-    os.environ['VLLM_USE_V1'] = '0'
     
     # Initialize vLLM engine
     logging.info("Initializing vLLM engine (V0)...")
