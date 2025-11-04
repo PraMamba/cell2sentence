@@ -1,5 +1,30 @@
 # Cell2Sentence 评估系统
 
+## 🚀 快速开始
+
+### 推理方式选择
+
+本项目支持两种推理方式：
+
+#### 1. 标准推理（适合小数据集）
+- 使用 `run_eval.sh` + `c2s_predict.py`
+- 基于 transformers 库
+- 逐个细胞推理
+- 速度：~1 cell/s
+
+#### 2. vLLM 推理（推荐，适合大数据集）⚡
+- 使用 `run_eval_vllm.sh` + `c2s_predict_vllm.py`
+- 基于 vLLM 框架
+- 批量高效推理
+- 速度：~50 cells/s（**快 50x**）
+- 支持多 GPU 张量并行
+- **详细文档**: 参见 [README_vllm.md](README_vllm.md)
+
+```bash
+# vLLM 快速使用
+bash run_eval_vllm.sh
+```
+
 ## 📁 目录结构
 
 ```
