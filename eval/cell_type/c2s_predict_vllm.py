@@ -17,7 +17,18 @@ Usage:
 # CRITICAL: Set environment variable BEFORE importing vllm
 # This must be done before any vllm imports to take effect
 import os
-os.environ['VLLM_USE_V1'] = '0'
+import sys
+
+# WORKAROUND: vLLM 0.11.0 has a bug where the LLM class always tries to use V1 engine
+# even when VLLM_USE_V1=0 is set. As a temporary workaround, we'll use V1 engine.
+# If Gemma2 has compatibility issues with V1, we may need to downgrade vLLM.
+# 
+# Original intent: Force V0 engine for Gemma2 compatibility
+# Current workaround: Use V1 engine to match what the LLM class expects
+os.environ['VLLM_USE_V1'] = '1'
+
+# Verify the environment variable is set correctly
+vllm_v1_value = os.environ.get('VLLM_USE_V1', 'not set')
 
 import json
 import argparse
@@ -28,6 +39,12 @@ from datetime import datetime
 import logging
 
 from vllm import LLM, SamplingParams
+
+# Additional check: try to access vLLM's internal environment settings
+try:
+    from vllm.envs import VLLM_USE_V1
+except ImportError:
+    print("[DEBUG] Could not import VLLM_USE_V1 from vllm.envs", file=sys.stderr)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -162,6 +179,10 @@ def run_vllm_inference(
     # Note: VLLM_USE_V1 environment variable should be set before importing vllm
     # This is already handled at the top of the script
     
+    # Double-check environment variable is still set correctly
+    current_vllm_v1 = os.environ.get('VLLM_USE_V1', 'not set')
+    logging.info(f"VLLM_USE_V1 environment variable at inference time: {current_vllm_v1}")
+    
     os.makedirs(output_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
@@ -175,9 +196,52 @@ def run_vllm_inference(
     print(f"[INFO] Batch size: {batch_size}")
     
     # Initialize vLLM engine
-    logging.info("Initializing vLLM engine (V0)...")
+    vllm_version = os.environ.get('VLLM_USE_V1', 'not set')
+    logging.info(f"Initializing vLLM engine (V{vllm_version})...")
+    
+    # WORKAROUND: Disable softcapping to avoid flash attention compatibility issues
+    # Read and modify model config to disable softcapping
+    import tempfile
+    import shutil
+    config_path = os.path.join(model_path, "config.json")
+    
+    temp_model_dir = None
+    if os.path.exists(config_path):
+        with open(config_path, 'r') as f:
+            config = json.load(f)
+        
+        # Check if softcapping is enabled
+        has_softcapping = config.get('attn_logit_softcapping') or config.get('final_logit_softcapping')
+        
+        if has_softcapping:
+            logging.info(f"Detected softcapping in model config: attn={config.get('attn_logit_softcapping')}, final={config.get('final_logit_softcapping')}")
+            logging.info("Creating temporary model directory with softcapping disabled...")
+            
+            # Create temporary directory
+            temp_model_dir = tempfile.mkdtemp(prefix="vllm_model_")
+            
+            # Create symlinks for all files except config.json (much faster than copying)
+            for item in os.listdir(model_path):
+                if item != "config.json":
+                    src = os.path.join(model_path, item)
+                    dst = os.path.join(temp_model_dir, item)
+                    os.symlink(src, dst)
+            
+            # Write modified config
+            config['attn_logit_softcapping'] = None
+            config['final_logit_softcapping'] = None
+            with open(os.path.join(temp_model_dir, "config.json"), 'w') as f:
+                json.dump(config, f, indent=2)
+            
+            model_path_to_use = temp_model_dir
+            logging.info(f"Using temporary model directory: {temp_model_dir}")
+        else:
+            model_path_to_use = model_path
+    else:
+        model_path_to_use = model_path
+    
     llm = LLM(
-        model=model_path,
+        model=model_path_to_use,
         tensor_parallel_size=tensor_parallel_size,
         gpu_memory_utilization=gpu_memory_utilization,
         trust_remote_code=True,
@@ -296,6 +360,14 @@ def run_vllm_inference(
     
     print(f"\n[SUCCESS] Predictions saved to: {output_file}")
     print(f"[INFO] Total predictions: {len(results)}")
+    
+    # Clean up temporary directory if created
+    if temp_model_dir and os.path.exists(temp_model_dir):
+        logging.info(f"Cleaning up temporary model directory: {temp_model_dir}")
+        try:
+            shutil.rmtree(temp_model_dir)
+        except Exception as e:
+            logging.warning(f"Failed to clean up temporary directory: {e}")
     
     return results, output_file
 

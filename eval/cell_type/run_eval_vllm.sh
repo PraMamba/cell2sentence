@@ -4,8 +4,10 @@ set -eu
 # === Environment Setup ===
 export CUDA_VISIBLE_DEVICES=0,1
 
-# Disable vLLM V1 engine to avoid Gemma2 compatibility issues
-export VLLM_USE_V1=0
+# WORKAROUND: vLLM 0.11.0 has a bug where LLM class always uses V1 engine
+# Setting to 1 to match what the LLM class expects
+# Original intent was to use V0 for Gemma2 compatibility, but V1 is forced by the code
+export VLLM_USE_V1=1
 
 source ~/.bashrc
 source ~/anaconda3/etc/profile.d/conda.sh
@@ -25,23 +27,26 @@ MODEL_PATH="/data/Mamba/Data/hf_cache/hub/models--vandijklab--C2S-Scale-Gemma-2-
 # MODEL_PATH="vandijklab/C2S-Scale-Gemma-2-2B"
 
 # Data preparation parameters
-N_GENES=200
+N_GENES=800
 SEED=1234
 ORGANISM="Homo sapiens"
 
 # vLLM configuration
-BATCH_SIZE=256
-MAX_NEW_TOKENS=20
+BATCH_SIZE=512
+MAX_NEW_TOKENS=256
 TENSOR_PARALLEL_SIZE=2
-GPU_MEMORY_UTILIZATION=0.9
-TEMPERATURE=0.0
-TOP_P=1.0
+GPU_MEMORY_UTILIZATION=0.7
+TEMPERATURE=0.2
+TOP_P=0.9
 TOP_K=-1
 
 # Datasets to evaluate
 DATASETS=(
     "A013:A013_processed_sampled_w_cell2sentence.h5ad"
-    # "D099:D099_processed_w_cell2sentence.h5ad"
+    "D094:D094_lung_subset_processed_w_cell2sentence.h5ad"
+    "D095:D095_subset_processed_w_cell2sentence.h5ad"
+    "D096:D096_subset_processed_w_cell2sentence.h5ad"
+    "D099:D099_processed_sampled_1k_w_cell2sentence.h5ad"
 )
 
 echo "============================================================"
