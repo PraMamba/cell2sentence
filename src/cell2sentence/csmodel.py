@@ -45,8 +45,18 @@ class CSModel():
         """
         self.model_name_or_path = model_name_or_path  # path to model to load
         self.save_dir = save_dir
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        print("Using device:", self.device)
+        # Check CUDA_VISIBLE_DEVICES to determine which GPU to use
+        if torch.cuda.is_available():
+            # CUDA_VISIBLE_DEVICES remaps devices, so cuda:0 is the first visible device
+            self.device = "cuda:0"
+            visible_devices = os.environ.get('CUDA_VISIBLE_DEVICES', '')
+            if visible_devices:
+                print(f"CUDA_VISIBLE_DEVICES={visible_devices}, using device: {self.device} (first visible GPU)")
+            else:
+                print(f"Using device: {self.device} (all GPUs visible)")
+        else:
+            self.device = "cpu"
+            print("Using device:", self.device)
 
         # Create save path
         if not os.path.exists(save_dir):
@@ -61,10 +71,13 @@ class CSModel():
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
         # Load model - either a pretrained C2S model path, or a Huggingface LLM name (if want to train from scratch on your own dataset)
+        # Use device_map="auto" to let transformers handle device placement
+        # This respects CUDA_VISIBLE_DEVICES and avoids DataParallel issues
         model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
             cache_dir=os.path.join(save_dir, ".cache"),  # model file takes up several GB if loading default Huggignface LLM models
-            trust_remote_code=True
+            trust_remote_code=True,
+            torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
         )
         model.save_pretrained(self.save_path)
 
@@ -128,12 +141,50 @@ class CSModel():
 
         # Load model
         print("Reloading model from path on disk:", self.save_path)
+        visible_devices = os.environ.get('CUDA_VISIBLE_DEVICES', '')
+        if visible_devices:
+            physical_gpus = [x.strip() for x in visible_devices.split(',') if x.strip()]
+            print(f"CUDA_VISIBLE_DEVICES={visible_devices}")
+            print(f"Physical GPU IDs: {physical_gpus}")
+            print(f"These will be mapped to logical GPU IDs: 0-{len(physical_gpus)-1}")
+        print(f"PyTorch sees {torch.cuda.device_count()} GPU(s) (logical IDs)")
+        if torch.cuda.is_available():
+            for i in range(torch.cuda.device_count()):
+                gpu_name = torch.cuda.get_device_name(i)
+                if visible_devices:
+                    physical_id = physical_gpus[i] if i < len(physical_gpus) else "unknown"
+                    print(f"  Logical GPU {i} -> Physical GPU {physical_id}: {gpu_name}")
+                else:
+                    print(f"  GPU {i}: {gpu_name}")
+        
+        # Don't manually move model to device - let Trainer handle DDP automatically
+        # If we move to a specific device, Trainer can't use DDP properly
         model = AutoModelForCausalLM.from_pretrained(
             self.save_path,
             cache_dir=os.path.join(self.save_dir, ".cache"),
-            trust_remote_code=True
+            trust_remote_code=True,
+            torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+            attn_implementation="eager",  # Recommended for Gemma2
         )
-        model = model.to(self.device)
+        # Enable gradient checkpointing if requested in training args
+        # This saves memory by trading compute for memory
+        if train_args.gradient_checkpointing:
+            if hasattr(model, 'gradient_checkpointing_enable'):
+                model.gradient_checkpointing_enable()
+                print("Gradient checkpointing enabled")
+            # Disable cache to save memory
+            if hasattr(model.config, 'use_cache'):
+                model.config.use_cache = False
+        # Don't move model to device manually when using DDP
+        # Trainer will handle device placement automatically for DDP
+        # Check if we're in a DDP environment
+        is_ddp = os.environ.get('RANK') is not None or os.environ.get('LOCAL_RANK') is not None
+        if not is_ddp and torch.cuda.device_count() == 1:
+            # Single GPU, non-DDP: move to device
+            model = model.to(self.device)
+        elif is_ddp:
+            print(f"DDP detected: RANK={os.environ.get('RANK')}, LOCAL_RANK={os.environ.get('LOCAL_RANK')}")
+            print("Model will be placed on device by Trainer automatically")
 
         # Tokenize data using LLM tokenizer
         # - this function applies a lambda function to tokenize each dataset split in the DatasetDict
@@ -213,7 +264,7 @@ class CSModel():
             data_collator=data_collator,
             train_dataset=train_dataset,
             eval_dataset=eval_dataset,
-            tokenizer=self.tokenizer
+            processing_class=self.tokenizer,  # Use processing_class instead of tokenizer (deprecated)
         )
         trainer.train()
         print(f"Finetuning completed. Updated model saved to disk at: {output_dir}")
