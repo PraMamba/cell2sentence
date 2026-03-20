@@ -1,0 +1,500 @@
+"""
+Cell2Sentence Prediction with vLLM
+
+This script performs efficient batch inference using vLLM for Cell2Sentence models.
+The output format adds two fields to each input record:
+- "ground_truth": Content from "gpt" response in conversations
+- "predicted_answer": Model inference result
+
+Usage:
+    python c2s_predict_vllm.py \
+        --input_file /path/to/conversations.jsonl \
+        --output_dir /path/to/save/results \
+        --model_path /path/to/C2S-Scale-Gemma-2-2B \
+        --batch_size 256 \
+        --tensor_parallel_size 2
+"""
+
+# CRITICAL: Set environment variable BEFORE importing vllm
+# This must be done before any vllm imports to take effect
+import os
+import sys
+
+# WORKAROUND: vLLM 0.11.0 has a bug where the LLM class always tries to use V1 engine
+# even when VLLM_USE_V1=0 is set. As a temporary workaround, we'll use V1 engine.
+# If Gemma2 has compatibility issues with V1, we may need to downgrade vLLM.
+# 
+# Original intent: Force V0 engine for Gemma2 compatibility
+# Current workaround: Use V1 engine to match what the LLM class expects
+os.environ['VLLM_USE_V1'] = '1'
+
+# Verify the environment variable is set correctly
+vllm_v1_value = os.environ.get('VLLM_USE_V1', 'not set')
+
+import json
+import argparse
+import re
+from typing import List, Dict
+from tqdm import tqdm
+from datetime import datetime
+import logging
+
+from vllm import LLM, SamplingParams
+
+# Additional check: try to access vLLM's internal environment settings
+try:
+    from vllm.envs import VLLM_USE_V1
+except ImportError:
+    print("[DEBUG] Could not import VLLM_USE_V1 from vllm.envs", file=sys.stderr)
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
+def load_conversation_data(input_file: str) -> List[Dict]:
+    """
+    Load conversation data from JSONL file.
+    
+    Validates that each record contains a 'conversations' field.
+    """
+    data = []
+    with open(input_file, 'r', encoding='utf-8') as f:
+        for line_num, line in enumerate(f, 1):
+            if line.strip():
+                try:
+                    record = json.loads(line)
+                    # Validate that record has conversations field
+                    if 'conversations' not in record:
+                        raise ValueError(
+                            f"Record at line {line_num} is missing 'conversations' field. "
+                            f"Each record must contain a 'conversations' list."
+                        )
+                    if not isinstance(record['conversations'], list):
+                        raise ValueError(
+                            f"Record at line {line_num} has invalid 'conversations' field. "
+                            f"Expected a list, got {type(record['conversations'])}."
+                        )
+                    data.append(record)
+                except json.JSONDecodeError as e:
+                    raise ValueError(f"Invalid JSON at line {line_num}: {e}")
+    
+    if len(data) == 0:
+        raise ValueError(f"No valid conversation records found in {input_file}")
+    
+    print(f"[INFO] Loaded {len(data)} conversation items from {input_file}")
+    return data
+
+
+def prepare_prompts_from_conversations(conversation_items: List[Dict], tokenizer) -> List[str]:
+    """
+    Convert conversation items to text prompts using chat template.
+    
+    For Cell2Sentence, we only need the user prompt (not the ground truth).
+    """
+    prompts = []
+    
+    for item in conversation_items:
+        conversations = item.get('conversations', [])
+        
+        # Convert 'from' field to 'role' for chat template compatibility
+        chat_messages = []
+        for conv in conversations:
+            if conv.get('from') == 'system':
+                chat_messages.append({"role": "system", "content": conv.get('value', '')})
+            elif conv.get('from') == 'human':
+                chat_messages.append({"role": "user", "content": conv.get('value', '')})
+            # Skip 'gpt' messages as those are ground truth answers
+        
+        # Apply chat template
+        if hasattr(tokenizer, 'apply_chat_template') and tokenizer.chat_template is not None:
+            try:
+                prompt = tokenizer.apply_chat_template(
+                    chat_messages,
+                    tokenize=False,
+                    add_generation_prompt=True
+                )
+                prompts.append(str(prompt) if prompt is not None else "")
+            except Exception as e:
+                logging.warning(f"Chat template failed: {e}, using simple format")
+                # Fallback to simple format
+                user_content = chat_messages[-1]["content"] if len(chat_messages) > 0 else ""
+                system_content = chat_messages[0]["content"] if len(chat_messages) > 1 else ""
+                prompts.append(f"{system_content}\n\nUser: {user_content}\n\nAssistant:")
+        else:
+            # No chat template, use simple format
+            user_content = ""
+            system_content = ""
+            for msg in chat_messages:
+                if msg["role"] == "system":
+                    system_content = msg["content"]
+                elif msg["role"] == "user":
+                    user_content = msg["content"]
+            prompts.append(f"{system_content}\n\nUser: {user_content}\n\nAssistant:")
+    
+    return prompts
+
+
+def extract_ground_truth_from_conversation(conversations: List[Dict]) -> str:
+    """Extract ground truth answer from conversations."""
+    for conv in conversations:
+        if conv.get('from') == 'gpt':
+            return conv.get('value', '')
+    return ""
+
+
+def extract_question_from_conversation(conversations: List[Dict]) -> str:
+    """Extract question from conversations."""
+    for conv in conversations:
+        if conv.get('from') == 'human':
+            return conv.get('value', '')
+    return ""
+
+
+def clean_prediction(prediction: str) -> str:
+    """
+    Clean model prediction by removing special tokens and trailing punctuation.
+    
+    Args:
+        prediction: Raw model output
+        
+    Returns:
+        Cleaned prediction
+    """
+    # Remove special tokens
+    prediction = prediction.replace("<ctrl100>", "").strip()
+    prediction = prediction.replace("<|endoftext|>", "").strip()
+    
+    # Remove trailing period if exists
+    if prediction.endswith('.'):
+        prediction = prediction[:-1]
+    
+    return prediction.strip()
+
+
+def run_vllm_inference(
+    input_file: str,
+    output_dir: str,
+    model_path: str,
+    dataset_id: str = None,
+    max_new_tokens: int = 20,
+    batch_size: int = 256,
+    tensor_parallel_size: int = 1,
+    gpu_memory_utilization: float = 0.9,
+    temperature: float = 0.0,
+    top_p: float = 1.0,
+    top_k: int = -1
+):
+    """
+    Run vLLM inference on conversation data.
+    
+    Output format: Each output record is the original input record with two added fields:
+    - "ground_truth": Content extracted from "gpt" response in conversations
+    - "predicted_answer": Model inference result (cleaned)
+    
+    Args:
+        input_file: Path to input JSONL file with conversations
+        output_dir: Directory to save results
+        model_path: Path to C2S model
+        dataset_id: Optional dataset identifier (auto-extracted if not provided)
+        max_new_tokens: Maximum tokens to generate
+        batch_size: Batch size for inference
+        tensor_parallel_size: Number of GPUs for tensor parallelism
+        gpu_memory_utilization: GPU memory utilization (0.0-1.0)
+        temperature: Sampling temperature
+        top_p: Top-p sampling
+        top_k: Top-k sampling
+    
+    Returns:
+        Tuple of (output_records, output_file_path)
+    """
+    # Note: VLLM_USE_V1 environment variable should be set before importing vllm
+    # This is already handled at the top of the script
+    
+    # Double-check environment variable is still set correctly
+    current_vllm_v1 = os.environ.get('VLLM_USE_V1', 'not set')
+    logging.info(f"VLLM_USE_V1 environment variable at inference time: {current_vllm_v1}")
+    
+    os.makedirs(output_dir, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    # Load conversation data
+    conversation_data = load_conversation_data(input_file)
+    
+    # Auto-extract dataset_id if not provided
+    if dataset_id is None:
+        # Try to extract from first record's metadata
+        if conversation_data and len(conversation_data) > 0:
+            first_record = conversation_data[0]
+            # Try metadata.dataset_id or metadata.perturbation_id or id field
+            if 'metadata' in first_record:
+                dataset_id = first_record['metadata'].get('dataset_id') or \
+                            first_record['metadata'].get('perturbation_id') or \
+                            first_record['metadata'].get('id', '')
+            elif 'id' in first_record:
+                dataset_id = first_record['id']
+        
+        # If still None, use input filename (without extension) as dataset_id
+        if not dataset_id:
+            dataset_id = os.path.splitext(os.path.basename(input_file))[0]
+        
+        logging.info(f"Auto-extracted dataset_id: {dataset_id}")
+    
+    print(f"\n[INFO] Model: {model_path}")
+    print(f"[INFO] Dataset ID: {dataset_id}")
+    print(f"[INFO] Tensor parallel size: {tensor_parallel_size}")
+    print(f"[INFO] GPU memory utilization: {gpu_memory_utilization}")
+    print(f"[INFO] Batch size: {batch_size}")
+    
+    # Initialize vLLM engine
+    vllm_version = os.environ.get('VLLM_USE_V1', 'not set')
+    logging.info(f"Initializing vLLM engine (V{vllm_version})...")
+    
+    # WORKAROUND: Disable softcapping to avoid flash attention compatibility issues
+    # Read and modify model config to disable softcapping
+    import tempfile
+    import shutil
+    config_path = os.path.join(model_path, "config.json")
+    
+    temp_model_dir = None
+    if os.path.exists(config_path):
+        with open(config_path, 'r') as f:
+            config = json.load(f)
+        
+        # Check if softcapping is enabled
+        has_softcapping = config.get('attn_logit_softcapping') or config.get('final_logit_softcapping')
+        
+        if has_softcapping:
+            logging.info(f"Detected softcapping in model config: attn={config.get('attn_logit_softcapping')}, final={config.get('final_logit_softcapping')}")
+            logging.info("Creating temporary model directory with softcapping disabled...")
+            
+            # Create temporary directory
+            temp_model_dir = tempfile.mkdtemp(prefix="vllm_model_")
+            
+            # Create symlinks for all files except config.json (much faster than copying)
+            for item in os.listdir(model_path):
+                if item != "config.json":
+                    src = os.path.join(model_path, item)
+                    dst = os.path.join(temp_model_dir, item)
+                    os.symlink(src, dst)
+            
+            # Write modified config
+            config['attn_logit_softcapping'] = None
+            config['final_logit_softcapping'] = None
+            with open(os.path.join(temp_model_dir, "config.json"), 'w') as f:
+                json.dump(config, f, indent=2)
+            
+            model_path_to_use = temp_model_dir
+            logging.info(f"Using temporary model directory: {temp_model_dir}")
+        else:
+            model_path_to_use = model_path
+    else:
+        model_path_to_use = model_path
+    
+    llm = LLM(
+        model=model_path_to_use,
+        tensor_parallel_size=tensor_parallel_size,
+        gpu_memory_utilization=gpu_memory_utilization,
+        trust_remote_code=True,
+        max_model_len=8192,
+    )
+    tokenizer = llm.get_tokenizer()
+    
+    # Set tokenizer properties
+    tokenizer.padding_side = "left"
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    
+    # Configure sampling parameters
+    sampling_params = SamplingParams(
+        temperature=temperature,
+        top_p=top_p,
+        top_k=top_k,
+        max_tokens=max_new_tokens,
+        stop_token_ids=[tokenizer.eos_token_id] if hasattr(tokenizer, 'eos_token_id') else None,
+    )
+    
+    logging.info(f"Sampling parameters: temp={temperature}, top_p={top_p}, top_k={top_k}, max_tokens={max_new_tokens}")
+    
+    print(f"[INFO] Starting inference on {len(conversation_data)} cells...")
+    
+    # Prepare all prompts
+    all_prompts = prepare_prompts_from_conversations(conversation_data, tokenizer)
+    
+    # Batch inference with vLLM
+    logging.info("Starting vLLM batch inference...")
+    
+    all_outputs = []
+    for i in tqdm(range(0, len(all_prompts), batch_size), desc="vLLM Inference"):
+        batch_prompts = all_prompts[i:i + batch_size]
+        try:
+            outputs = llm.generate(batch_prompts, sampling_params)
+            all_outputs.extend(outputs)
+        except Exception as e:
+            logging.error(f"Error in batch {i//batch_size}: {e}")
+            all_outputs.extend([None] * len(batch_prompts))
+    
+    # Process results: add ground_truth and predicted_answer to original records
+    print("[INFO] Processing results...")
+    output_records = []
+    
+    for idx, (item, output) in enumerate(tqdm(zip(conversation_data, all_outputs), total=len(conversation_data))):
+        try:
+            # Create a copy of the original record
+            output_record = item.copy()
+            
+            # Extract ground truth from "gpt" response in conversations
+            ground_truth = extract_ground_truth_from_conversation(item.get('conversations', []))
+            
+            # Extract predicted answer from model output
+            if output is not None:
+                assistant_reply = output.outputs[0].text.strip()
+            else:
+                assistant_reply = "ERROR: Generation failed"
+            
+            # For perturbation response prediction, the output is directly the gene list
+            # Extract the prediction (split by the prompt separator if needed)
+            if "The cell type corresponding to these genes is:" in assistant_reply:
+                predicted_answer = assistant_reply.split("The cell type corresponding to these genes is:")[1].strip()
+            else:
+                predicted_answer = assistant_reply
+            
+            # Clean prediction (remove special tokens and trailing punctuation)
+            predicted_answer = clean_prediction(predicted_answer)
+            
+            # Add ground_truth and predicted_answer fields to the original record
+            output_record["ground_truth"] = ground_truth
+            output_record["predicted_answer"] = predicted_answer
+            
+            output_records.append(output_record)
+            
+        except Exception as e:
+            logging.error(f"Failed to process result for sample {idx}: {e}")
+            # Create a copy of the original record even on error
+            output_record = item.copy()
+            ground_truth = extract_ground_truth_from_conversation(item.get('conversations', []))
+            output_record["ground_truth"] = ground_truth
+            output_record["predicted_answer"] = f"ERROR: {str(e)}"
+            output_records.append(output_record)
+    
+    # Save results as JSONL (one JSON object per line, matching input format)
+    output_file = os.path.join(
+        output_dir,
+        f"predictions_{timestamp}.jsonl"
+    )
+    
+    with open(output_file, 'w', encoding='utf-8') as f:
+        for record in output_records:
+            f.write(json.dumps(record, ensure_ascii=False) + '\n')
+    
+    print(f"\n[SUCCESS] Predictions saved to: {output_file}")
+    print(f"[INFO] Total predictions: {len(output_records)}")
+    print(f"[INFO] Output format: Original record + 'ground_truth' + 'predicted_answer' fields")
+    
+    # Clean up temporary directory if created
+    if temp_model_dir and os.path.exists(temp_model_dir):
+        logging.info(f"Cleaning up temporary model directory: {temp_model_dir}")
+        try:
+            shutil.rmtree(temp_model_dir)
+        except Exception as e:
+            logging.warning(f"Failed to clean up temporary directory: {e}")
+    
+    return output_records, output_file
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Cell2Sentence Prediction with vLLM. Output adds 'ground_truth' and 'predicted_answer' fields to input records."
+    )
+    parser.add_argument(
+        "--input_file",
+        type=str,
+        required=True,
+        help="Path to input conversation JSONL file"
+    )
+    parser.add_argument(
+        "--output_dir",
+        type=str,
+        required=True,
+        help="Directory to save results"
+    )
+    parser.add_argument(
+        "--model_path",
+        type=str,
+        required=True,
+        help="Path to C2S model"
+    )
+    parser.add_argument(
+        "--dataset_id",
+        type=str,
+        default=None,
+        help="Optional dataset identifier (auto-extracted from input file if not provided)"
+    )
+    parser.add_argument(
+        "--max_new_tokens",
+        type=int,
+        default=20,
+        help="Maximum tokens to generate (default: 20)"
+    )
+    parser.add_argument(
+        "--batch_size",
+        type=int,
+        default=256,
+        help="Batch size for vLLM inference (default: 256)"
+    )
+    parser.add_argument(
+        "--tensor_parallel_size",
+        type=int,
+        default=1,
+        help="Number of GPUs for tensor parallelism (default: 1)"
+    )
+    parser.add_argument(
+        "--gpu_memory_utilization",
+        type=float,
+        default=0.9,
+        help="GPU memory utilization (0.0-1.0, default: 0.9)"
+    )
+    parser.add_argument(
+        "--temperature",
+        type=float,
+        default=0.0,
+        help="Sampling temperature (default: 0.0)"
+    )
+    parser.add_argument(
+        "--top_p",
+        type=float,
+        default=1.0,
+        help="Top-p sampling (default: 1.0)"
+    )
+    parser.add_argument(
+        "--top_k",
+        type=int,
+        default=-1,
+        help="Top-k sampling (default: -1, disabled)"
+    )
+    
+    args = parser.parse_args()
+    
+    if not os.path.exists(args.input_file):
+        raise FileNotFoundError(f"Input file not found: {args.input_file}")
+    
+    if not os.path.exists(args.model_path):
+        raise FileNotFoundError(f"Model path not found: {args.model_path}")
+    
+    run_vllm_inference(
+        input_file=args.input_file,
+        output_dir=args.output_dir,
+        model_path=args.model_path,
+        dataset_id=args.dataset_id,
+        max_new_tokens=args.max_new_tokens,
+        batch_size=args.batch_size,
+        tensor_parallel_size=args.tensor_parallel_size,
+        gpu_memory_utilization=args.gpu_memory_utilization,
+        temperature=args.temperature,
+        top_p=args.top_p,
+        top_k=args.top_k
+    )
+
+
+if __name__ == "__main__":
+    main()
+
